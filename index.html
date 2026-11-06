@@ -1,34 +1,326 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Portfólio de Guilherme Santiago, estudante e desenvolvedor de sistemas."><title>Guilherme Santiago — Desenvolvedor de Sistemas</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="img/image.ico" type="image/ico"> 
-<style>
-:root{--bg:#101211;--panel:#191c19;--line:#343831;--ink:#f2f1e8;--muted:#a5aaa0;--lime:#c7f36b;--max:1320px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--lime);color:#111} .wrap{width:min(var(--max),calc(100% - 112px));margin:auto}.header{height:90px;border-bottom:1px solid #2a2d29;display:flex;align-items:center}.nav{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:10px;align-items:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;letter-spacing:-.6px}.brand-icon{width:32px;height:32px;background:var(--lime);color:#111;display:grid;place-items:center;font-size:17px;border-radius:5px}.brand-dot{color:var(--lime)}.nav-links{display:flex;gap:35px;align-items:center;color:#b7bcb2;font-size:13px}.nav-links a:hover{color:var(--lime)}.nav-contact{color:var(--ink)!important;border:1px solid #555b4e;border-radius:5px;padding:12px 17px}.nav-contact span{color:var(--lime);margin-left:12px}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 12px;border-radius:4px}
-.hero{padding:104px 0 80px;display:grid;grid-template-columns:1.08fr .92fr;gap:62px;align-items:center}.eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--lime);display:flex;align-items:center;gap:10px}.eyebrow:before{content:'';width:22px;height:1px;background:var(--lime)}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:'Space Grotesk',sans-serif}.hero h1{font-size:clamp(58px,6.6vw,94px);line-height:.98;letter-spacing:-6px;margin:30px 0 25px;max-width:760px}.hero h1 .outline{color:var(--lime)}.hero-desc{font-size:16px;line-height:1.8;color:#aeb4a9;max-width:520px}.hero-desc strong{color:#e5e7dc;font-weight:500}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}.button{display:inline-flex;align-items:center;justify-content:center;gap:28px;padding:16px 21px;border-radius:4px;font-size:13px;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-3px)}.button-primary{background:var(--lime);color:#171b13}.button-primary:hover{background:#d9ff8b}.button-secondary{border:1px solid #4a4f46;color:#e9eadf}.button-secondary:hover{background:#22271f}.arrow{font-size:17px;line-height:1}.availability{display:flex;align-items:center;gap:9px;margin-top:43px;color:#9da598;font-size:12px}.availability i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px #bdf36b}
-.visual{position:relative;min-height:440px;display:flex;align-items:center;justify-content:center}.visual:before{content:'';position:absolute;inset:9% 3%;background:radial-gradient(ellipse,#42552b 0%,#1a2118 40%,transparent 70%);opacity:.7}.orbit{position:absolute;width:390px;height:390px;border:1px solid #38422e;border-radius:50%}.orbit:before,.orbit:after{content:'';position:absolute;border:1px solid #30382c;border-radius:50%;inset:27px}.orbit:after{inset:68px}.spark{position:absolute;width:9px;height:9px;background:var(--lime);border-radius:50%;top:15%;right:23%;box-shadow:0 0 18px var(--lime)}.code-card{position:relative;z-index:1;width:100%;max-width:440px;background:#1a1e1a;border:1px solid #464c3f;border-radius:9px;box-shadow:0 26px 80px #0008;transform:rotate(-3deg);overflow:hidden}.code-top{height:49px;border-bottom:1px solid #353b32;display:flex;align-items:center;padding:0 17px;gap:6px}.code-top i{height:7px;width:7px;border-radius:50%;background:#62695e}.code-top i:first-child{background:var(--lime)}.code-filename{font-size:11px;color:#899082;margin-left:14px}.code-body{padding:31px 28px 35px;font:13px/2.05 'Courier New',monospace;color:#d6dacd;white-space:pre}.purple{color:#c6b4ec}.green{color:var(--lime)}.dim{color:#727d6d}.blue{color:#91c5c3}.card-tag{position:absolute;right:-9px;bottom:30px;background:#c7f36b;color:#1b2115;z-index:2;padding:14px 18px;border-radius:5px;font-size:11px;font-weight:700;box-shadow:0 10px 30px #0005}.card-tag span{display:block;font-size:10px;font-weight:500;margin-top:4px;color:#485938}.side-note{position:absolute;right:0;top:40px;writing-mode:vertical-rl;color:#778072;font-size:10px;letter-spacing:2px;text-transform:uppercase}
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.strip-inner{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:26px 0}.strip-label{font-size:10px;text-transform:uppercase;letter-spacing:1.6px;line-height:1.5;color:#939a8f;max-width:150px}.tech-list{display:flex;gap:clamp(18px,3vw,46px);flex-wrap:wrap;color:#d7dbd0;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600}.tech-list span{white-space:nowrap}.tech-list b{color:var(--lime);font-weight:400;margin-right:5px}.section{padding:108px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}.section-title{font-size:clamp(38px,4vw,56px);line-height:1.08;letter-spacing:-2.8px;margin-top:19px}.section-title em{font-style:normal;color:var(--lime)}.section-intro{max-width:350px;color:var(--muted);font-size:14px;line-height:1.8}.project{display:grid;grid-template-columns:1fr 1fr;background:#1b1e1a;border:1px solid #353a32;border-radius:8px;overflow:hidden}.project-art{min-height:390px;background:#c5ee75;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#152015}.project-art:before,.project-art:after{content:'';position:absolute;width:370px;height:370px;border:1px solid #789d48;border-radius:50%}.project-art:after{width:520px;height:520px;opacity:.55}.art-window{width:72%;height:238px;border-radius:7px;background:#f2f4e9;position:relative;z-index:1;transform:rotate(-4deg);box-shadow:0 22px 50px #445c3270;overflow:hidden}.art-top{height:30px;background:#1b271c;display:flex;align-items:center;padding:0 12px;gap:4px}.art-top i{width:5px;height:5px;background:#a9c990;border-radius:50%}.art-content{display:flex;height:calc(100% - 30px)}.art-sidebar{width:20%;background:#e4e9d8;border-right:1px solid #d1d9c7;padding:14px 8px}.art-sidebar i{display:block;background:#c4cebb;height:4px;border-radius:4px;margin-bottom:12px}.art-main{padding:18px;width:80%}.art-mini{font-size:8px;font-weight:700;color:#6e8363}.art-main strong{display:block;font-family:'Space Grotesk';font-size:22px;letter-spacing:-1px;margin:10px 0}.art-line{height:5px;width:85%;background:#d5ddce;margin:8px 0;border-radius:4px}.art-line.short{width:58%}.art-boxes{display:flex;gap:7px;margin-top:18px}.art-boxes i{height:50px;flex:1;background:#e3ead9;border-radius:4px}.art-boxes i:first-child{background:#c3ec8b}.art-caption{position:absolute;left:22px;bottom:20px;font-size:10px;letter-spacing:1.2px;font-weight:700;z-index:2;text-transform:uppercase}.project-info{padding:55px;display:flex;flex-direction:column;justify-content:center}.project-type{font-size:11px;color:var(--lime);text-transform:uppercase;letter-spacing:1.4px;font-weight:700}.project-info h3{font-size:42px;letter-spacing:-2px;margin:15px 0}.project-info p{font-size:14px;line-height:1.85;color:#aeb5aa;max-width:440px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}.tags span{border:1px solid #474e42;border-radius:30px;padding:7px 11px;color:#c2c9bc;font-size:11px}.project-foot{margin-top:37px;padding-top:20px;border-top:1px solid #3a4036;display:flex;justify-content:space-between;color:#8f998b;font-size:12px}.project-foot strong{color:#dae1d4;font-weight:500}
-.about{background:#e9ece1;color:#1a2019}.about .eyebrow{color:#5b782f}.about .eyebrow:before{background:#5b782f}.about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:100px}.about .section-title em{color:#6f963b}.about-copy{font-size:17px;line-height:1.8;color:#596257;max-width:650px}.about-copy strong{color:#1c251b;font-weight:600}.facts{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:37px}.fact{border-top:1px solid #bac4b4;padding-top:18px}.fact strong{font-family:'Space Grotesk';font-size:22px;display:block;color:#1c251b}.fact span{font-size:12px;color:#747e70;display:block;margin-top:5px}.education{padding-top:28px;border-top:1px solid #b9c4b3;margin-top:44px}.education-title{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#68805a;font-weight:700;margin-bottom:20px}.edu-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:15px 0;border-top:1px solid #ced6c9}.edu-row strong{font-size:14px;display:block}.edu-row span{color:#6b7668;font-size:12px;display:block;margin-top:5px}.edu-row small{color:#697765;font-size:11px}.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{border:1px solid #373d34;border-radius:6px;padding:30px;min-height:190px}.skill-num{color:var(--lime);font-size:11px}.skill h3{font-size:21px;letter-spacing:-.5px;margin:30px 0 12px}.skill p{font-size:13px;line-height:1.7;color:#9fa89b}.contact{padding:90px 0;background:#c7f36b;color:#172015}.contact-inner{display:flex;align-items:end;justify-content:space-between;gap:35px}.contact .eyebrow{color:#536e32}.contact .eyebrow:before{background:#536e32}.contact h2{font-size:clamp(44px,5.5vw,78px);line-height:1;letter-spacing:-4px;margin:20px 0}.contact p{font-size:15px;color:#526444;line-height:1.7}.contact .button{background:#172015;color:#e9f4df;white-space:nowrap;border:0;cursor:pointer}.contact-details{margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:770px}.contact-details[hidden]{display:none}.contact-item{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 18px;border:1px solid #97bf50;border-radius:5px;background:#d4f99a}.contact-item-label{display:block;font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:#536e32;font-weight:700;margin-bottom:6px}.contact-item-value{font-size:14px;font-weight:700;overflow-wrap:anywhere}.copy-button{border:1px solid #789e40;border-radius:4px;background:transparent;color:#26371c;padding:9px 11px;cursor:pointer;font-size:12px;font-weight:700;white-space:nowrap}.copy-button:hover{background:#e3ffb7}.copy-feedback{font-size:12px;color:#405a2a;margin-top:12px;min-height:1em}.footer{padding:27px 0;color:#929b8d;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.footer strong{color:#e0e6d9}.footer a:hover{color:var(--lime)}
-@media(max-width:900px){.wrap{width:min(100% - 48px,var(--max))}.hero{grid-template-columns:1fr 1fr;gap:15px}.hero h1{font-size:58px;letter-spacing:-4px}.visual{min-height:380px}.orbit{width:300px;height:300px}.code-body{font-size:11px}.project-info{padding:35px}.about-grid{gap:40px}.tech-list{font-size:14px}}@media(max-width:680px){.header{height:72px}.nav-links{display:none;position:absolute;z-index:10;top:71px;left:0;right:0;background:#191c19;padding:24px;flex-direction:column;align-items:stretch;gap:22px;border-bottom:1px solid #444}.nav-links.open{display:flex}.menu-toggle{display:block}.hero{padding:70px 0 55px;grid-template-columns:1fr}.hero h1{font-size:clamp(53px,13vw,76px);letter-spacing:-4px}.hero-desc{font-size:15px}.visual{margin-top:24px;min-height:360px}.code-card{max-width:390px}.code-body{font-size:11px;padding:25px 20px}.side-note{display:none}.card-tag{right:0}.strip-inner{align-items:flex-start;flex-direction:column;gap:17px}.strip-label{max-width:none}.tech-list{gap:16px 24px}.section{padding:75px 0}.section-head{display:block}.section-intro{margin-top:20px}.project{grid-template-columns:1fr}.project-art{min-height:310px}.project-info{padding:30px}.project-info h3{font-size:36px}.about-grid{grid-template-columns:1fr;gap:30px}.about-copy{font-size:15px}.skills{grid-template-columns:1fr}.skill{min-height:0}.skill h3{margin-top:20px}.contact{padding:75px 0}.contact-inner{display:block}.contact h2{letter-spacing:-2.5px}.contact .button{margin-top:30px}.contact-details{grid-template-columns:1fr}.footer-inner{flex-direction:column}}
-</style></head>
-<body>
-<header class="header"><div class="wrap nav"><a class="brand" href="#inicio" aria-label="Guilherme Santiago, início"><span class="brand-icon">g.</span> guilherme<span class="brand-dot">.</span></a><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button><nav class="nav-links" aria-label="Navegação principal"><a href="#sobre">Sobre</a><a href="#projeto">Projeto</a><a href="#habilidades">Habilidades</a><a class="nav-contact" href="#contato">Vamos conversar <span>↗</span></a></nav></div></header>
-<main id="inicio"><section class="wrap hero"><div><div class="eyebrow">Olá, eu sou Guilherme Santiago</div><h1>Ideias em<br>código<span class="outline">.</span><br>Futuro em<br>construção<span class="outline">.</span></h1><p class="hero-desc">Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por transformar ideias em soluções digitais que fazem a diferença.</p><div class="actions"><a class="button button-primary" href="#projeto">Conheça meu projeto <span class="arrow">↗</span></a><a class="button button-secondary" href="curriculo-guilherme-santiago.pdf" download>Baixar currículo <span class="arrow">↓</span></a></div><div class="availability"><i></i> Em busca da primeira oportunidade ou estágio</div></div><div class="visual" aria-label="Ilustração de uma janela de código"><div class="orbit"></div><div class="spark"></div><span class="side-note">Criatividade + tecnologia</span><div class="code-card"><div class="code-top"><i></i><i></i><i></i><span class="code-filename">guilherme.js</span></div><div class="code-body"><span class="purple">const</span> desenvolvedor = {
-  nome: <span class="green">'Guilherme Santiago'</span>,
-  formação: <span class="green">'ADS @ Fatec ZL'</span>,
-  habilidades: [<span class="green">'JavaScript'</span>,
-    <span class="green">'PHP'</span>, <span class="green">'SQL'</span>],
-  aprendendo: <span class="blue">true</span>,
-  objetivo: <span class="green">'criar soluções'</span>
-};
-
-<span class="dim">// Sempre pronto para aprender.</span></div></div><div class="card-tag">DISPONÍVEL PARA<span>Novas oportunidades ↗</span></div></div></section>
-<div class="strip"><div class="wrap strip-inner"><div class="strip-label">Tecnologias que fazem parte da minha jornada</div><div class="tech-list"><span><b>✳</b> HTML & CSS</span><span>JavaScript</span><span>PHP</span><span>SQL</span><span>Node.js</span><span>Python</span></div></div></div>
-<section class="section wrap" id="projeto"><div class="section-head"><div><div class="eyebrow">01 / Projeto em destaque</div><h2 class="section-title">Da ideia à <em>solução.</em></h2></div><p class="section-intro">Um projeto que reúne aprendizado, colaboração e vontade de criar algo com propósito.</p></div><article class="project"><div class="project-art"><div class="art-window"><div class="art-top"><i></i><i></i><i></i></div><div class="art-content"><div class="art-sidebar"><i></i><i></i><i></i><i></i></div><div class="art-main"><div class="art-mini">EXPERTIFY / APRENDIZADO</div><strong>Seu próximo passo<br>começa aqui.</strong><div class="art-line"></div><div class="art-line short"></div><div class="art-boxes"><i></i><i></i><i></i></div></div></div></div><span class="art-caption">Ilustração conceitual do projeto ↗</span></div><div class="project-info"><div class="project-type">TCC · ETEC São Mateus · 2025</div><h3>Expertify<span style="color:var(--lime)">.</span></h3><p>Uma plataforma de cursos e empregabilidade para quem está começando no mercado de trabalho. Liderei o desenvolvimento do projeto e construí o back-end, incluindo um assistente de suporte com inteligência artificial.</p><div class="tags"><span>JavaScript</span><span>PHP</span><span>SQL</span><span>MySQL</span><span>API Gemini</span></div><div class="project-foot"><span>Meu papel</span><strong>Liderança & desenvolvimento ↗</strong></div></div></article></section>
-<section class="section about" id="sobre"><div class="wrap about-grid"><div><div class="eyebrow">02 / Um pouco sobre mim</div><h2 class="section-title">Curioso por natureza.<br><em>Dev por escolha.</em></h2></div><div><p class="about-copy">Sou Guilherme, estudante de tecnologia com vontade de aprender, colaborar e tirar boas ideias do papel. Tenho formação técnica em Desenvolvimento de Sistemas e atualmente curso <strong>Análise e Desenvolvimento de Sistemas na Fatec Zona Leste.</strong></p><div class="facts"><div class="fact"><strong>B2</strong><span>Inglês · certificado TOEIC Bridges</span></div><div class="fact"><strong>2028</strong><span>Previsão de conclusão da graduação</span></div></div><div class="education"><div class="education-title">Formação</div><div class="edu-row"><div><strong>Fatec Zona Leste</strong><span>Tecnólogo em Análise e Desenvolvimento de Sistemas</span></div><small>Até 2028</small></div><div class="edu-row"><div><strong>ETEC São Mateus</strong><span>Técnico em Análise e Desenvolvimento de Sistemas</span></div><small>Concluído em 2025</small></div></div></div></div></section>
-<section class="section wrap" id="habilidades"><div class="section-head"><div><div class="eyebrow">03 / Conhecimentos</div><h2 class="section-title">Sempre em <em>evolução.</em></h2></div><p class="section-intro">Uma base em desenvolvimento e a curiosidade para continuar aprendendo.</p></div><div class="skills"><div class="skill"><span class="skill-num">01 / DESENVOLVIMENTO</span><h3>Construção web</h3><p>Projetos e protótipos com HTML, CSS, JavaScript e PHP. Conhecimentos intermediários em SQL e Node.js.</p></div><div class="skill"><span class="skill-num">02 / APRENDIZADO</span><h3>Novas ferramentas</h3><p>Conhecimentos básicos em React, Svelte e Express.js, além de familiaridade com Python, Java e C++.</p></div><div class="skill"><span class="skill-num">03 / COLABORAÇÃO</span><h3>Comunicação</h3><p>Inglês avançado e experiência apresentando projetos, com nota máxima em comunicação no TCC.</p></div></div></section>
-<section class="contact" id="contato"><div class="wrap"><div class="contact-inner"><div><div class="eyebrow">04 / Vamos nos conectar</div><h2>Vamos construir<br>algo juntos?</h2><p>Estou aberto a oportunidades, novos desafios e boas conversas.</p></div><button class="button contact-toggle" type="button" aria-expanded="false" aria-controls="contact-details">Entre em contato <span class="arrow">↗</span></button></div><div class="contact-details" id="contact-details" hidden><div class="contact-item"><div><span class="contact-item-label">Celular</span><span class="contact-item-value">(11) 98890-5793</span></div><button class="copy-button" type="button" data-copy="(11) 98890-5793" data-label="Celular">Copiar</button></div><div class="contact-item"><div><span class="contact-item-label">E-mail</span><span class="contact-item-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c7d5c9cfccc9d4c9c1c7cfe0c7cdc1c9cc8ec3cfcd">[email&#160;protected]</a></span></div><button class="copy-button" type="button" data-copy="guiolitiago@gmail.com" data-label="E-mail">Copiar</button></div></div><div class="copy-feedback" role="status" aria-live="polite"></div></div></section></main>
-<footer class="footer"><div class="wrap footer-inner"><span><strong>guilherme.</strong> &nbsp; Feito para novas possibilidades.</span><span>São Paulo, Brasil &nbsp; / &nbsp; <a href="/cdn-cgi/l/email-protection#c1a6b4a8aeada8b5a8a0a6ae81a6aca0a8adefa2aeac"><span class="__cf_email__" data-cfemail="7b1c0e121417120f121a1c143b1c161a121755181416">[email&#160;protected]</span></a></span><a href="#inicio">Voltar ao topo ↑</a></div></footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav-links');toggle.addEventListener('click',()=>{const isOpen=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',isOpen);toggle.setAttribute('aria-label',isOpen?'Fechar menu':'Abrir menu');toggle.textContent=isOpen?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Abrir menu');toggle.textContent='☰'}));const contactToggle=document.querySelector('.contact-toggle');const contactDetails=document.querySelector('#contact-details');const feedback=document.querySelector('.copy-feedback');contactToggle.addEventListener('click',()=>{const open=contactDetails.hidden;contactDetails.hidden=!open;contactToggle.setAttribute('aria-expanded',String(open));contactToggle.innerHTML=open?'Fechar contato <span class="arrow">×</span>':'Entre em contato <span class="arrow">↗</span>';feedback.textContent=''});document.querySelectorAll('.copy-button').forEach(button=>button.addEventListener('click',async()=>{const text=button.dataset.copy;try{if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(text)}else{const input=document.createElement('textarea');input.value=text;input.setAttribute('readonly','');input.style.position='fixed';input.style.opacity='0';document.body.appendChild(input);input.select();const copied=document.execCommand('copy');input.remove();if(!copied)throw new Error('copy failed')}feedback.textContent=button.dataset.label+' copiado!';button.textContent='Copiado!';setTimeout(()=>{button.textContent='Copiar'},2000)}catch(error){feedback.textContent='Não foi possível copiar automaticamente. Selecione o texto para copiar.'}}));</script>
-</body></html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Portfólio de Guilherme Santiago, estudante e desenvolvedor de sistemas." />
+        <title>Guilherme Santiago — Desenvolvedor de Sistemas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="docs/assets/img/image.ico" type="image/ico" />
+        <link rel="stylesheet" href="docs/assets/css/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrap nav">
+                <a class="brand" href="#inicio" aria-label="Guilherme Santiago, início"
+                    ><span class="brand-icon">g.</span> guilherme<span class="brand-dot">.</span></a
+                ><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+                <nav class="nav-links" aria-label="Navegação principal">
+                    <a href="#sobre">Sobre</a><a href="#projeto">Projeto</a><a href="#habilidades">Habilidades</a
+                    ><a class="nav-contact" href="#contato">Vamos conversar <span>↗</span></a>
+                </nav>
+            </div>
+        </header>
+        <main id="inicio">
+            <section class="wrap hero">
+                <div>
+                    <div class="eyebrow">Olá, eu sou Guilherme Santiago</div>
+                    <h1>
+                        Ideias em<br />código<span class="outline">.</span><br />Futuro em<br />construção<span
+                            class="outline"
+                            >.</span
+                        >
+                    </h1>
+                    <p class="hero-desc">
+                        Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, apaixonado por transformar
+                        ideias em soluções digitais que fazem a diferença.
+                    </p>
+                    <div class="actions">
+                        <a class="button button-primary" href="#projeto"
+                            >Conheça meu projeto <span class="arrow">↗</span></a
+                        ><a class="button button-secondary" href="curriculo-guilherme-santiago.pdf" download
+                            >Baixar currículo <span class="arrow">↓</span></a
+                        >
+                    </div>
+                    <div class="availability"><i></i> Em busca da primeira oportunidade ou estágio</div>
+                </div>
+                <div class="visual" aria-label="Ilustração de uma janela de código">
+                    <div class="orbit"></div>
+                    <div class="spark"></div>
+                    <span class="side-note">Criatividade + tecnologia</span>
+                    <div class="code-card">
+                        <div class="code-top"><i></i><i></i><i></i><span class="code-filename">guilherme.js</span></div>
+                        <div class="code-body">
+                            <div class="code-line"><span class="purple">const</span> desenvolvedor = {</div>
+                            <div class="code-line indented">nome: <span class="green">'Guilherme Santiago'</span>,</div>
+                            <div class="code-line indented">formação: <span class="green">'ADS @ Fatec ZL'</span>,</div>
+                            <div class="code-line indented">habilidades: [</div>
+                            <div class="code-line continued">
+                                <span class="green">'JavaScript', 'PHP', 'SQL'</span>],
+                            </div>
+                            <div class="code-line indented">aprendendo: <span class="blue">true</span>,</div>
+                            <div class="code-line indented">objetivo: <span class="green">'criar soluções'</span></div>
+                            <div class="code-line">};</div>
+                            <div class="code-line code-comment"><span class="dim">// Sempre pronto para aprender.</span></div>
+                        </div>
+                    </div>
+                    <div class="card-tag">DISPONÍVEL PARA<span>Novas oportunidades ↗</span></div>
+                </div>
+            </section>
+            <div class="strip">
+                <div class="wrap strip-inner">
+                    <div class="strip-label">Tecnologias que fazem parte da minha jornada</div>
+                    <div class="tech-list">
+                        <span><b>✳</b> HTML & CSS</span><span>JavaScript</span><span>PHP</span><span>SQL</span
+                        ><span>Node.js</span><span>Python</span>
+                    </div>
+                </div>
+            </div>
+            <section class="section wrap" id="projeto">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">01 / Projeto em destaque</div>
+                        <h2 class="section-title">Da ideia à <em>solução.</em></h2>
+                    </div>
+                    <p class="section-intro">
+                        Um projeto que reúne aprendizado, colaboração e vontade de criar algo com propósito.
+                    </p>
+                </div>
+                <article class="project">
+                    <div class="project-art">
+                        <div class="art-window">
+                            <div class="art-top"><i></i><i></i><i></i></div>
+                            <div class="art-content">
+                                <div class="art-sidebar"><i></i><i></i><i></i><i></i></div>
+                                <div class="art-main">
+                                    <div class="art-mini">EXPERTIFY / APRENDIZADO</div>
+                                    <strong>Seu próximo passo<br />começa aqui.</strong>
+                                    <div class="art-line"></div>
+                                    <div class="art-line short"></div>
+                                    <div class="art-boxes"><i></i><i></i><i></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="art-caption">Ilustração conceitual do projeto ↗</span>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-type">TCC · ETEC São Mateus · 2025</div>
+                        <h3>Expertify<span style="color: var(--lime)">.</span></h3>
+                        <p>
+                            Uma plataforma de cursos e empregabilidade para quem está começando no mercado de trabalho.
+                            Liderei o desenvolvimento do projeto e construí o back-end, incluindo um assistente de
+                            suporte com inteligência artificial.
+                        </p>
+                        <div class="tags">
+                            <span>JavaScript</span><span>PHP</span><span>SQL</span><span>MySQL</span
+                            ><span>API Gemini</span>
+                        </div>
+                        <div class="project-foot">
+                            <span>Meu papel</span><strong>Liderança & desenvolvimento ↗</strong>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="section about" id="sobre">
+                <div class="wrap about-grid">
+                    <div>
+                        <div class="eyebrow">02 / Um pouco sobre mim</div>
+                        <h2 class="section-title">Curioso por natureza.<br /><em>Dev por escolha.</em></h2>
+                    </div>
+                    <div>
+                        <p class="about-copy">
+                            Sou Guilherme, estudante de tecnologia com vontade de aprender, colaborar e tirar boas
+                            ideias do papel. Tenho formação técnica em Desenvolvimento de Sistemas e atualmente curso
+                            <strong>Análise e Desenvolvimento de Sistemas na Fatec Zona Leste.</strong>
+                        </p>
+                        <div class="facts">
+                            <div class="fact"><strong>B2</strong><span>Inglês · certificado TOEIC Bridges</span></div>
+                            <div class="fact"><strong>2028</strong><span>Previsão de conclusão da graduação</span></div>
+                        </div>
+                        <div class="education">
+                            <div class="education-title">Formação</div>
+                            <div class="edu-row">
+                                <div>
+                                    <strong>Fatec Zona Leste</strong
+                                    ><span>Tecnólogo em Análise e Desenvolvimento de Sistemas</span>
+                                </div>
+                                <small>Até 2028</small>
+                            </div>
+                            <div class="edu-row">
+                                <div>
+                                    <strong>ETEC São Mateus</strong
+                                    ><span>Técnico em Análise e Desenvolvimento de Sistemas</span>
+                                </div>
+                                <small>Concluído em 2025</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section wrap" id="habilidades">
+                <div class="section-head">
+                    <div>
+                        <div class="eyebrow">03 / Conhecimentos</div>
+                        <h2 class="section-title">Sempre em <em>evolução.</em></h2>
+                    </div>
+                    <p class="section-intro">Uma base em desenvolvimento e a curiosidade para continuar aprendendo.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill">
+                        <span class="skill-num">01 / DESENVOLVIMENTO</span>
+                        <h3>Construção web</h3>
+                        <p>
+                            Projetos e protótipos com HTML, CSS, JavaScript e PHP. Conhecimentos intermediários em SQL e
+                            Node.js.
+                        </p>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-num">02 / APRENDIZADO</span>
+                        <h3>Novas ferramentas</h3>
+                        <p>
+                            Conhecimentos básicos em React, Svelte e Express.js, além de familiaridade com Python, Java
+                            e C++.
+                        </p>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-num">03 / COLABORAÇÃO</span>
+                        <h3>Comunicação</h3>
+                        <p>
+                            Inglês avançado e experiência apresentando projetos, com nota máxima em comunicação no TCC.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="contact" id="contato">
+                <div class="wrap">
+                    <div class="contact-inner">
+                        <div>
+                            <div class="eyebrow">04 / Vamos nos conectar</div>
+                            <h2>Vamos construir<br />algo juntos?</h2>
+                            <p>Estou aberto a oportunidades, novos desafios e boas conversas.</p>
+                        </div>
+                        <button
+                            class="button contact-toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="contact-details"
+                        >
+                            Entre em contato <span class="arrow">↗</span>
+                        </button>
+                    </div>
+                    <div class="contact-details" id="contact-details" hidden>
+                        <div class="contact-item">
+                            <div>
+                                <span class="contact-item-label">Celular</span
+                                ><span class="contact-item-value">(11) 98890-5793</span>
+                            </div>
+                            <button class="copy-button" type="button" data-copy="(11) 98890-5793" data-label="Celular">
+                                Copiar
+                            </button>
+                        </div>
+                        <div class="contact-item">
+                            <div>
+                                <span class="contact-item-label">E-mail</span
+                                ><span class="contact-item-value"
+                                    ><a
+                                        href="/cdn-cgi/l/email-protection"
+                                        class="__cf_email__"
+                                        data-cfemail="a0c7d5c9cfccc9d4c9c1c7cfe0c7cdc1c9cc8ec3cfcd"
+                                        >[email&#160;protected]</a
+                                    ></span
+                                >
+                            </div>
+                            <button
+                                class="copy-button"
+                                type="button"
+                                data-copy="guiolitiago@gmail.com"
+                                data-label="E-mail"
+                            >
+                                Copiar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="copy-feedback" role="status" aria-live="polite"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="wrap footer-inner">
+                <span><strong>guilherme.</strong> &nbsp; Feito para novas possibilidades.</span
+                ><span
+                    >São Paulo, Brasil &nbsp; / &nbsp;
+                    <a href="/cdn-cgi/l/email-protection#c1a6b4a8aeada8b5a8a0a6ae81a6aca0a8adefa2aeac"
+                        ><span class="__cf_email__" data-cfemail="7b1c0e121417120f121a1c143b1c161a121755181416"
+                            >[email&#160;protected]</span
+                        ></a
+                    ></span
+                ><a href="#inicio">Voltar ao topo ↑</a>
+            </div>
+        </footer>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script>
+            const toggle = document.querySelector(".menu-toggle");
+            const nav = document.querySelector(".nav-links");
+            toggle.addEventListener("click", () => {
+                const isOpen = nav.classList.toggle("open");
+                toggle.setAttribute("aria-expanded", isOpen);
+                toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+                toggle.textContent = isOpen ? "✕" : "☰";
+            });
+            nav.querySelectorAll("a").forEach((a) =>
+                a.addEventListener("click", () => {
+                    nav.classList.remove("open");
+                    toggle.setAttribute("aria-expanded", "false");
+                    toggle.setAttribute("aria-label", "Abrir menu");
+                    toggle.textContent = "☰";
+                })
+            );
+            const contactToggle = document.querySelector(".contact-toggle");
+            const contactDetails = document.querySelector("#contact-details");
+            const feedback = document.querySelector(".copy-feedback");
+            contactToggle.addEventListener("click", () => {
+                const open = contactDetails.hidden;
+                contactDetails.hidden = !open;
+                contactToggle.setAttribute("aria-expanded", String(open));
+                contactToggle.innerHTML = open
+                    ? 'Fechar contato <span class="arrow">×</span>'
+                    : 'Entre em contato <span class="arrow">↗</span>';
+                feedback.textContent = "";
+            });
+            document.querySelectorAll(".copy-button").forEach((button) =>
+                button.addEventListener("click", async () => {
+                    const text = button.dataset.copy;
+                    try {
+                        if (navigator.clipboard && window.isSecureContext) {
+                            await navigator.clipboard.writeText(text);
+                        } else {
+                            const input = document.createElement("textarea");
+                            input.value = text;
+                            input.setAttribute("readonly", "");
+                            input.style.position = "fixed";
+                            input.style.opacity = "0";
+                            document.body.appendChild(input);
+                            input.select();
+                            const copied = document.execCommand("copy");
+                            input.remove();
+                            if (!copied) throw new Error("copy failed");
+                        }
+                        feedback.textContent = button.dataset.label + " copiado!";
+                        button.textContent = "Copiado!";
+                        setTimeout(() => {
+                            button.textContent = "Copiar";
+                        }, 2000);
+                    } catch (error) {
+                        feedback.textContent =
+                            "Não foi possível copiar automaticamente. Selecione o texto para copiar.";
+                    }
+                })
+            );
+        </script>
+    </body>
+</html>
